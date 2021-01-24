@@ -79,8 +79,9 @@ def generator_of_reader(bound, knowledge_graphs, rdf_decomposer, ):
             total_sentence += 1
 
             try:
+                print("Sentence", sentence)
                 s, p, o, flag = rdf_decomposer(sentence)
-
+                print(s,p,o,flag)
                 # <..> <..> <..>
                 if flag != triple:
                     print(sentence, '+', flag)
