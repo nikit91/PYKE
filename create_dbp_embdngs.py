@@ -7,6 +7,7 @@ import util as ut
 import numpy as np
 
 try:
+    print("Starting embeddings generation")
     random_state = 1
     np.random.seed(random_state)
 
@@ -19,6 +20,8 @@ try:
 
     kg_root = '../dbpedia/pyke_data'
     kg_path = kg_root + '/'
+
+    print("Path to KG: ", kg_path)
 
     storage_path, experiment_folder = ut.create_experiment_folder()
     print("Storage path: ",storage_path, "\texperiment folder: ",experiment_folder)
