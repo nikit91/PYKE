@@ -45,7 +45,7 @@ learned_embeddings = model.pipeline_of_learning_embeddings(e=embeddings,
 
 
 learned_embeddings.to_csv(storage_path + '/PYKE_100_embd.csv')
-
+print("Done!")
 # To use memory efficiently
 del holder
 del embeddings
