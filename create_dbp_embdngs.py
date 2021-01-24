@@ -26,7 +26,7 @@ def main():
         print("Path to KG: ", kg_path)
 
         storage_path, experiment_folder = ut.create_experiment_folder()
-        logger = create_logger(name='PYKE', p=storage_path)
+        logger = ut.create_logger(name='PYKE', p=storage_path)
         logger.info("Storage path: ", storage_path, "\texperiment folder: ", experiment_folder)
         parser = Parser(p_folder=storage_path, k=K)
         parser.set_logger(logger)
