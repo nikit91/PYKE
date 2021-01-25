@@ -16,7 +16,8 @@ def main():
         # DEFINE MODEL PARAMS
         K = 45
         num_of_dims = 100
-        bound_on_iter = 30
+        #epochs
+        bound_on_iter = 5
         omega = 0.45557
         e_release = 0.0414
 
