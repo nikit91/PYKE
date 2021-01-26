@@ -28,7 +28,7 @@ def main():
 
         storage_path, experiment_folder = ut.create_experiment_folder()
         logger = ut.create_logger(name='PYKE', p=storage_path)
-        logger.info("Storage path: ", storage_path, "\texperiment folder: ", experiment_folder)
+        logger.info("Storage path: "+ storage_path+ "\texperiment folder: "+ experiment_folder)
         parser = Parser(p_folder=storage_path, k=K)
         parser.set_logger(logger)
         logger.info("Setting similarity measure")
@@ -42,7 +42,7 @@ def main():
         holder = parser.pipeline_of_preprocessing(kg_path)
 
         vocab_size = len(holder)
-        logger.info("Vocab size: ", vocab_size)
+        logger.info("Vocab size: "+ str(vocab_size))
         embeddings = ut.randomly_initialize_embedding_space(vocab_size, num_of_dims)
 
         learned_embeddings = model.pipeline_of_learning_embeddings(e=embeddings,
