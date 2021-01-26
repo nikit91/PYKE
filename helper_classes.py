@@ -364,10 +364,14 @@ class PYKE(object):
             pull, p = self.apply_hooke_s_law(e, target_index, indexes_of_attractive, pms_of_contest)
 
             sum_pos_sem_dist += p
+            #taking care of NaN
+            sum_pos_sem_dist = np.nan_to_num(sum_pos_sem_dist)
 
             push, n = self.apply_inverse_hooke_s_law(e, target_index, indexes_of_repulsive,
                                                      omega)
             sum_neg_sem_dist += n
+            # taking care of NaN
+            sum_neg_sem_dist = np.nan_to_num(sum_neg_sem_dist)
 
             total_effect = (pull + push) * self.system_energy
 
